@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block content %}
+		<h1 style="text-align:center;">WELCOME</h1>
+		<br>
+<span style="float:right; width:30%;">
+	<center>
+		{%if x==1%}
+	<table id="searchresult">
+		<tr>
+			<th colspan="2">
+				ISSUED BOOKS
+			</th>
+		</tr>
+		{%for i in books%}
+		<tr>
+			<td>
+				TRANSACTION ID:
+			</td>
+			<td>
+				{{i[0]}}
+			</td>
+		</tr>
+		<tr>
+			<td>
+				BOOK ID:
+			</td>
+			<td>
+				{{i[1]}}
+			</td>
+		</tr>
+		<tr>
+			<td>
+				ADMIN ID:
+			</td>
+			<td>
+				{{i[3]}}
+			</td>
+		</tr>
+		<tr>
+			<td>
+				ISSUE DATE:
+			</td>
+			<td>
+				{{i[4]}}
+			</td>
+		</tr>
+		{%else%}
+		{%endfor%}
+	</table>
+	{%else%}
+	<h2>NO BOOKS ISSUED YET</h2>
+	{%endif%}
+	<br>
+	<br>
+	</center>
+	<br>
+	<br>
+	<br>
+</span>
+<span style="width:30%;">
+		<table id="searchresult">
+			<tr>
+				<th colspan="2">
+					{{info[2]}}
+				</th>
+			</tr>
+			<tr>
+				<td>
+					STUDENT ID:
+				</td>
+				<td>
+					{{info[0]}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					CARDNUM:
+				</td>
+				<td>
+					{{info[1]}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					NAME:
+				</td>
+				<td>
+					{{info[2]}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					DOB:
+				</td>
+				<td>
+					{{info[3]}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					DOJ:
+				</td>
+				<td>
+					{{info[4]}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					ADDRESS:
+				</td>
+				<td>
+					{{info[5]}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					PHONE:
+				</td>
+				<td>
+					{{info[6]}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					BORROWLIMIT:
+				</td>
+				<td>
+					{{info[7]}}
+				</td>
+			</tr>
+		</table>
+</span>
+<br><br>
+{% endblock %}

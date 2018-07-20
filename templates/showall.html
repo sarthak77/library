@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if request.method == "GET" %}
+<form method="post" action="/searchbook">
+	<center>
+		<table id="search">
+			<tr>
+				<td id="search1">
+					<input id="search2" type="text"  name="name" placeholder="Title of the Book">
+				</td>
+				<td id="search1">
+					<input id="search2" type="text" name="author" placeholder="Author of the Book">
+				</td>
+				<td id="search1">
+					<input id="search2" type="text" name="category" placeholder="Category of Book">
+				</td>
+				<td id="search1">
+					<button type="submit" id="subbut">SEARCH</button>
+				</td>
+			</tr>
+		</table>
+	</center>
+</form>
+<br>
+<center>
+	<table id="search3">
+		<tr>
+			<td id="search4">
+				<b>
+					<a href="/studentinfo">
+						MY ACCOUNT
+					</a>
+				</b>
+			</td>
+			<td id="search4">
+				<b>
+					<a href="/apply">
+						REGISTER
+					</a>
+				</b>
+			</td>
+			<td id="search4">
+				<b>
+					<a href="/allbooks">
+						SHOW ALL
+					</a>
+				</b>
+			</td>
+		</tr>
+	</table>
+</center>
+<br><br>
+<center>
+	<div id="divshow">
+		<button id="divshow2" onclick="change(-1)">
+			<b>
+				&lt;
+			</b>
+		</button>
+		<button id="divshow3" onclick="change(1)">
+			<b>
+				&gt;
+			</b>
+		</button>
+	</div>
+</center>
+<script>
+var x=0;
+function change(n)
+{
+	console.log(x);
+	x=(x+n)%5;
+	if(x<0)
+		x=4;
+	if(x==0)
+		document.getElementById("divshow").style.backgroundImage="url(../static/book1.jpg)";
+	if(x==1)
+		document.getElementById("divshow").style.backgroundImage="url(../static/book2.jpg)";
+	if(x==2)
+		document.getElementById("divshow").style.backgroundImage="url(../static/book3.jpg)";
+	if(x==3)
+		document.getElementById("divshow").style.backgroundImage="url(../static/book4.jpg)";
+	if(x==4)
+		document.getElementById("divshow").style.backgroundImage="url(../static/book5.jpg)";
+}
+</script>
+	<br><br>
+	<center>
+		<h2>
+			TOP CATEGORIES
+		</h2>
+		<h3 style="text-align:left;">
+			CLASSIC
+		</h3>
+		<table id="bookdisplay">
+			<tr>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/865.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/4671.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/5107.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/5470.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/7613.jpg">
+				</td>
+			</tr>
+		</table>
+		<h3 style="text-align:left;">
+			HORROR
+		</h3>
+		<table id="bookdisplay">
+			<tr>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/30285766.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/34964828.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/35035160.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/35068836.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/35292343.jpg">
+				</td>
+			</tr>
+		</table>
+		<h3 style="text-align:left;">
+			FANTASY
+		</h3>
+		<table id="bookdisplay">
+			<tr>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/12474623.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/29982722.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/30075733.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/34499221.jpg">
+				</td>
+				<td id="bookdisplay2">
+					<img id="bookdisplay3" src="../static/34728667.jpg">
+				</td>
+			</tr>
+		</table>
+	</center>
+	{% endif %}
+	{% endblock %}

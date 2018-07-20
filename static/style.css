@@ -1,0 +1,427 @@
+body
+{
+	font-size:100%;
+}
+
+#t1
+{
+	border-collapse:collapse;
+	background-color:black;
+	border:1px solid black;
+	width:100%
+}
+#t11
+{
+	width:25%;
+	padding:.5em;
+	text-align:center;
+	border:1px solid white;
+	color:white;
+}
+#t2
+{
+	border-collapse:collapse;
+	border:1px solid black;
+	width:40%
+}
+#t21
+{
+	text-align:center;
+	border:1px solid black;
+}
+#t22
+{
+	text-align:center;
+	border:1px solid black;
+}
+div
+{
+	text-align:left;
+	width:70%;
+	position:bottom;
+}
+#foot
+{
+	position:absolute;
+	position:bottom;
+	background-color:black;
+	color:white;
+	width:100%;
+	text-align:center;
+}
+
+a:link,a:visited
+{
+	color:white;
+	text-decoration:none;
+}
+a:hover
+{
+	color:grey;
+}
+#t3
+{
+	border-collapse:collapse;
+	border:1px solid black;
+	width:50%
+}
+#t31
+{
+	text-align:center;
+	border:1px solid black;
+}
+#books
+{
+	border-collapse:collapse;
+	border:1px solid black;
+	width80%
+}
+#books1
+{
+	text-align:center;
+	border:1px solid black;
+}
+#nonwhite
+{
+	color:black;
+	text-decoration:none;
+}
+#nonwhite:hover
+{
+	color:red;
+	text-decoration:none;
+}
+.login
+{
+	position:inline-block;
+	display:inline-block;
+}
+.login span
+{
+	box-shadow: 5px 5px 5px grey;
+	padding:1%;
+	border-radius:.7em;
+	background-color:white;
+	color:black;
+	border: 2px solid black;
+	text-align:center;
+	width:15%;
+	position:absolute;
+	top:5%;
+	left:80.6%;
+}
+
+.login span:hover
+{
+	box-shadow: 10px 10px 5px grey;
+	color:red;
+}
+
+.addbooks
+{
+	position:inline-block;
+	display:inline-block;
+}
+.addbooks span
+{
+	box-shadow: 5px 5px 5px grey;
+	padding:1%;
+	border-radius:.7em;
+	background-color:white;
+	color:black;
+	border: 2px solid black;
+	text-align:center;
+	width:10%;
+	position:absolute;
+	top:20%;
+	left:85.3%;
+}
+.addbooks span:hover
+{
+	box-shadow: 10px 10px 5px grey;
+	color:red;
+}
+
+#addbookslink:link
+{
+	color:black;
+	text-decoration:none;
+}
+#addbookslink:visited
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+button
+{
+	padding:.1em;
+	font-size:1.2em;
+	border-radius:.2em;
+	background-color:white;
+	color:black;
+	border:2px solid black;
+}
+button:hover
+{
+	padding:.1em;
+	border-radius:.5em;
+	background-color:black;
+	color:white;
+	border:2px solid black;
+}
+
+#subbut
+{
+	padding:.1em;
+	font-size:1.2em;
+	border-radius:.2em;
+	background-color:black;
+	color:white;
+	border:2px solid black;
+}
+#subbut:hover
+{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.19);
+	padding:.1em;
+	border-radius:.5em;
+	border:2px solid black;
+}
+
+
+
+#loginbutton
+{
+	padding:.1em;
+	font-size:1.2em;
+	border-radius:.2em;
+	background-color:white;
+	color:black;
+	border:2px solid black;
+}
+#loginbutton:hover
+{
+	padding:.1em;
+	border-radius:.5em;
+	background-color:black;
+	color:white;
+	border:2px solid black;
+}
+
+legend
+{
+	border:2px solid black;
+}
+
+fieldset
+{
+	border:2px solid black;
+}
+
+#searchresult
+{
+	text-align:center;
+	border-collapse:collapse;
+}
+
+#searchresult tr,td
+{
+	text-align:center;
+	padding:1em;
+	border-bottom:1px solid black;
+}
+
+#searchresult th
+{
+	text-align:center;
+	padding:1em;
+	background-color:black;
+	color:white;
+}
+#searchresult tr:hover
+{
+	text-align:center;
+	background-color:#f5f5f5;
+}
+
+#search
+{
+	width:90%;
+	background-color:black;
+	padding:0px;
+	border:1px solid black;
+}
+
+#search1
+{
+	padding:.2em;
+	border:0;
+}
+
+#search2
+{
+	width:100%;
+	padding:.1em;
+	font-size:1.2em;
+	border-radius:.2em;
+	background-color:white;
+	color:black;
+	border:2px solid black;
+}
+
+#search2:hover
+{
+	border:0px solid white;
+	background-color:black;
+	color:white;
+}
+#search3
+{
+	padding:0px;
+	border:0px solid black;
+	color:white;
+	width:90%;
+}
+#search4
+{
+	background-color:black;
+	border-radius:1em;
+	text-align:center;
+}
+
+#divshow
+{
+	text-align:center;
+	width:45vw;
+	border:10px solid black;
+	height:50vh;
+	background-image:url('../static/book1.jpg');
+	background-size:100% 100%;
+}
+#divshow2
+{
+	color:white;
+	text-align:center;
+	background-color:black;
+	border-radius:0.5em;
+	border:0px solid black;
+	position:relative;
+	top:24vh;
+	left:-22vw;
+	width:3vw;
+	height:4vh;
+}
+#divshow3
+{
+	color:white;
+	text-align:center;
+	background-color:black;
+	border-radius:0.5em;
+	border:0px solid black;
+	position:relative;
+	top:24vh;
+	left:22vw;
+	width:3vw;
+	height:4vh;
+}
+
+#divshow2:hover,#divshow3:hover
+{
+	opacity:0.7;
+}
+
+#bookdisplay
+{
+	padding:0;
+	width:80%;
+	border-collapse:collapse;
+	height:30%;
+}
+
+#bookdisplay2
+{
+	padding:.1em;
+	width:20%;
+	height:100%;
+	background-color:black;
+	border-radius:1em;
+	border:1em solid white;
+}
+#bookdisplay3
+{
+	width:99%;
+	height:99%;
+}
+
+ul li
+{
+	background-image:url('../static/bullet.jpg');
+	padding-left: 2rem;
+	background-position: 0 0;
+	background-size: 1.6rem 1.6rem;
+	background-repeat: no-repeat;
+}
+
+ul 
+{
+	padding-left: 2rem;
+	list-style-type: none;
+}
+
+#list
+{
+	color:black;
+	text-decoration:none;
+}
+
+#list:hover
+{
+	opacity:0.4;
+}
+
+#pagination2
+{
+	background-color:black;
+	border-radius:.5em;
+}
+
+#pagination1
+{
+	color:white;
+	text-decoration:none;
+}
+#pagination2:hover
+{
+	opacity:.7;
+}
+
+#backbutton
+{
+	padding:.1em;
+	font-size:1.2em;
+	border-radius:.2em;
+	background-color:white;
+	color:black;
+	border:2px solid black;
+}
+#backbutton:hover
+{
+	padding:.1em;
+	border-radius:.5em;
+	background-color:black;
+	color:white;
+	border:2px solid black;
+}
+
+#check0
+{
+	display:none;
+}
+
+
+
+#check1
+{
+	display:none;
+}

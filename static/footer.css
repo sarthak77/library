@@ -1,0 +1,77 @@
+.foot
+{
+	border-radius:1em;
+	height:80%;
+	width:80%;
+
+}
+
+.foot:hover
+{
+	opacity:0.5;
+}
+
+.tooltip {
+	position:relative;
+    display: inline-block;
+}
+
+
+.tooltip .tooltiptext {
+        visibility: hidden;
+	width:500%;
+	height:10%;
+        color: grey;
+        text-align: center;
+	font-size:100%;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+	top:150%;
+	left:-20%;
+}
+
+.tooltip:hover .tooltiptext {
+        visibility: visible;
+}
+
+.tooltip .two {
+        visibility: hidden;
+        width:500%;
+        height:10%;
+        color: grey;
+        text-align: center;
+        font-size:100%;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top:150%;
+        left:-200%;
+}
+
+.tooltip:hover .two {
+        visibility: visible;
+}
+
+.tooltip .three {
+        visibility: hidden;
+        width:500%;
+        height:10%;
+        color: grey;
+        text-align: center;
+        font-size:100%;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top:150%;
+        left:-350%;
+}
+
+.tooltip:hover .three {
+        visibility: visible;
+}
+
+

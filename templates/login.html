@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+	<fieldset>
+		<legend>
+			<b>
+			LOG IN INFO(ADMIN)
+			</b>
+			</legend>
+			<br>
+	<form action='{{url_for("login", next=request.values.get("next"))}}' method="post">
+		<input type="text" name="username" id="username" placeholder="Username" minlength="4"maxlength="10"required autofocus>
+		<br><br>
+		<input type="password" name="password" id="password" placeholder="Password" required autofocus>
+		<br><br>
+		<input id="loginbutton" type="submit" class="button" value="Log In"/>
+	</form>
+<!--	<strong>New Admin</strong>
+<a id="nonwhite" href="/signup"> Click here to Sign up</a>-->
+		</fieldset>
+{% endblock %}

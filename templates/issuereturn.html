@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<center>
+	<div>
+<form method="post" action="/issue">
+	<fieldset>
+		<legend><b>
+			ISSUE BOOK
+			</b></legend>
+			<br>
+	<div>
+		<input type="text"id="bookID" name="bookID" placeholder="Book ID" required="">
+	</div>
+	<br>
+
+	<div>
+		<input type="text" id="studentid" name="studentid" placeholder="Student ID" required="">
+	</div>
+	<br>
+	<input type="hidden" name="adminid" id="adminid" value="1234">
+	<button type="submit">Issue</button>
+	</fieldset>
+</form>
+<form method="post" action="/return">
+	<fieldset>
+		<legend><b>
+			RETURN BOOK
+			</b></legend>
+			<br>
+
+	<div>
+		<input type="text" id="bookID" name="bookID" placeholder="Book ID" required="">
+	</div>
+	<input type="hidden" name="adminid" id="adminid" value="1234">
+	<br>
+	<button type="submit">Return</button>
+	</fieldset>
+</form>
+</div>
+</center>
+{% endblock %}

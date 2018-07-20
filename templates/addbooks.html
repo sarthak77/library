@@ -1,0 +1,19 @@
+{% extends 'base.html' %}                                                                            
+{% block content %}
+{% if error %} 
+<p class=error><strong>Error:</strong> {{ error }}
+{% endif %}  
+<center>
+	<div>
+		<form method="post" action="{{ url_for('added') }}">
+			<fieldset>
+				<legend><b>BOOK INFO</b></legend>
+				<p><label>Name:</label> <input type="text" name="name" required></p>  
+				<p><label>Author:</label> <input type="text" name="author" required></p>
+				<p><label>Category:</label> <input type="text" name="category" required></p>
+				<p><button type="submit">ADD</button></p>
+			</fieldset>
+		</form>
+	</div>
+</center>
+{% endblock%}

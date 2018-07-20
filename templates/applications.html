@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+{%if count!=0%}
+<center>
+	<h2>PENDING REQUESTS</h2>
+	
+	<table id="searchresult">
+			<tr>
+				<th>STUDENT ID</th>
+				<th>Name</th>
+				<th>DOB</th>
+				<th>Phone</th>
+				<th>Action</th>
+			</tr>
+			{% for patron in payload.applications %}
+			<tr>
+				<td>{{patron[0]}}</td>
+				<td>{{patron[1]}}</td>
+				<td>{{patron[2]}}</td>
+				<td>{{patron[4]}}</td>
+				<td>
+				<a id="nonwhite"href="/accept/{{patron[0]}}" role="button">Accept</a>
+				<br><br>
+				<a id="nonwhite"href="/reject/{{patron[0]}}" role="button">Reject</a>
+				</td>
+			</tr>
+			{% endfor %}
+	</table>
+</center>
+{%else%}
+<center>
+	<h2>NO PENDING REQUESTS</h2>
+</center>
+{%endif%}
+{% endblock %}

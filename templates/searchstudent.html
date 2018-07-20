@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content%}
+{% if request.method == "GET" %}
+<center>
+	<div>
+		<form method="post" action="/searchstudent">
+			<fieldset>
+				<legend><b>
+						Search Student
+					</b></legend>
+					<br>
+					<div>
+					<input type="text"id="id" name="id" placeholder="ID">
+	</div>
+	<br>
+	<div>
+		<input type="text"id="name" name="name" placeholder="Name">
+	</div>
+	<br>
+	<div>
+		<input type="text"id="cardnum" name="cardnum" placeholder="Card Number">
+	</div>
+	<br>
+	<button type="submit">Submit</button>
+			</fieldset>	
+		</form>
+		</div>
+</center>
+{% endif %}
+
+
+
+{% if request.method == "POST" %}
+<center>
+	<h2>STUDENT SEARCH RESULT</h2>
+	{%if payload.students[1]!=0%}
+	<table id="searchresult">
+			<tr>
+				<th>ID</th>
+				<th>CardNum</th>
+				<th>Name</th>
+				<th>DOJ</th>
+				<th>Phone</th>
+			</tr>
+			{% for student in payload.students[0] %}
+			<tr>
+				<td> {{student[0]}}</td>
+				<td>{{student[1]}}</td>
+				<td>{{student[2]}}</td>
+				<td>{{student[4]}}</td>
+				<td>{{student[6]}}</td>
+			</tr>
+			{% endfor %}
+	</table>
+	{%else%}
+	<h2>NO STUDENT FOUND</h2>
+	{%endif%}
+</center>
+{% endif %}
+{% endblock %}

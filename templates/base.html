@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+	<link rel="shortcut icon" href="../static/index.png" type="image/x-icon">
+	<link rel="stylesheet" type=text/css href="{{url_for('static',filename='style.css')}}">
+	<link rel="stylesheet" type=text/css href="{{url_for('static',filename='footer.css')}}">
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+	<title>
+		LIBRARY
+	</title>
+
+</head>		
+<body>
+	{%if logged_in and access==1%}
+	<div class="login">
+		<a id="addbookslink"href = '/logout'>
+			<span>
+				<b>
+					HELLO {{username}}!
+					<br>
+					(logged in as admin)
+					<br><br>
+					click to:
+					<br>
+					LOG OUT
+				</b>
+			</span>
+		</a>
+	</div>
+	{%else%}
+	{%endif%}
+	{%if logged_in and access==2%}
+	<div class="login">
+		<a id="addbookslink"href = '/logout'>
+			<span>
+				<b>
+					HELLO {{username}}!
+					<br>
+					(logged in as student)
+					<br><br>
+					click to:
+					<br>
+					LOG OUT
+				</b>
+			</span>
+		</a>
+	</div>
+	{%else%}
+	{%endif%}
+	{%if access==0%}
+	<div class="login">
+		<a id="addbookslink"href = '/login'>
+			<span>
+				<b>
+					Log in as
+					<br><br>
+					ADMIN
+				</b>
+			</span>
+		</a>
+	</div>
+	{%else%}
+	{%endif%}
+	<center>
+		<a href="/">
+			<img src="../static/index.png"></img>
+		</a>
+	</center>
+	<h1 align="center">
+		WELCOME TO LIBRARY PORTAL
+	</h1>
+	<table id="t1">
+		<th id="t11">
+			<a href="/">
+				HOME
+			</a>
+		</th>
+		<th id="t11">
+			<a href="/showall">
+				WEB OPAC
+			</a>
+		</th>
+		<th id="t11">
+			<a href="/contact">
+				CONTACT US
+			</a>
+		</th>
+		<th id="t11">
+			<a href="/loginstudent">
+				STUDENT LOGIN
+			</a>
+		</th>
+		</tr>
+	</table>
+	<br><br>
+
+	{%if logged_in and access==1%}
+	<div class="addbooks">
+		<a id="addbookslink"href="/adminrights">
+			<span>
+				<b>
+					ADMIN<br>RIGHTS
+				</b>
+			</span>
+		</a>
+	</div>
+	{%else%}
+	{%endif%}
+
+	<center>
+		<div>
+			{% block content%}
+			{% endblock %}
+		</div>
+	</center>
+	<br><br>
+	<div id="foot">
+
+		<br>© SITE DESIGNED BY SARTHAK SINGHAL AND GAURAV BATRA<br>
+		SUPERVISED BY:SHIVANG NAGARIA<br><br>
+	</div>
+	<script src="../static/validation.js"></script>
+</body>
+</html>

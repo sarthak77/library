@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>dues</title>
+		<style>
+#searchresult
+{
+	text-align:center;
+	border-collapse:collapse;
+}
+
+			#searchresult tr,td
+			{
+				text-align:center;
+				padding:1em;
+				border:2px solid black;
+			}
+
+			#searchresult th
+			{
+				text-align:center;
+				padding:1em;
+				background-color:black;
+				color:white;
+			}
+			#searchresult tr:hover
+			{
+				text-align:center;
+				background-color:#f5f5f5;
+			}
+
+		</style>
+	</head>
+	<body style="margin:100px;">
+		<center>
+		<table id="searchresult">
+			<tr>
+				<th>
+					Transaction_Id
+				</th>
+				<td>
+					{{ transactionid }}
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Student_Id	
+				</th>
+				<td>
+					{{ studentid }}
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Student_Name
+				</th>
+				<td>
+					{{ studentname }}
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Book_Id
+				</th>
+				<td>
+					{{ bookid }}
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Book_Name
+				</th>
+				<td>
+					{{ bookname }}
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Book_Author
+				</th>
+				<td>
+					{{ bookauthor }}
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Admin_Id
+				</th>
+				<td>
+					{{ adminid }}
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Date_Of_Issue
+				</th>
+				<td>
+					{{ dateofissue }}
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Late_Fees
+				</th>
+				<td>
+					{{ latefees }}
+				</td>
+			</tr>
+
+		</table>
+		</center>
+	</body>
+</html>

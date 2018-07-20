@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+{%if x[1]!=0%}
+<center>
+	<h1 style="text-align;center;">RESULTS</h1>
+	<table id="searchresult">
+		<tr>
+			<th>ID</th>
+			<th>USERNAME</th>
+			<th>PHONE</th>
+			<th>EMAIL</th>
+		</tr>
+		{%for i in x[0]%}
+		<tr>
+			<td>{{i[0]}}</td>
+			<td>{{i[1]}}</td>
+			<td>{{i[3]}}</td>
+			<td>{{i[4]}}</td>
+		</tr>
+		{%endfor%}
+	</table>
+</center>
+{%else%}
+<h1 style="text-align;center;">
+	No admins found
+</h1>
+{%endif%}
+{% endblock %}

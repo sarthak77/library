@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if error %} 
+<p class=error><strong>Error:</strong> {{ error }}
+{% endif %}  
+<center>
+	<div>
+		<form name="signup" method="post" action="{{ url_for('signedup') }}">
+			<fieldset>
+				<legend><b>SIGN UP INFO</b></legend>
+				<p><label>Email:</label> <input id="signupemail"type="email" name="email" required autofocus></p>  
+				<p><label>Username:</label> <input type="text" name="username" minlength="4"maxlength="10"required autofocus></p>
+				<p><label>Password:</label> <input title="wewew"id="signuppassword"type="password" name="password" invalid required autofocus></p>
+				<p><label>Phone number:</label> <input id="signupphone"type="text" name="phone"></p>
+				<p>Don't worry we'll only show your phone number to people who are your friends.</p>
+				<p><button type="button" onclick="Validatesignup()">VERIFY</button>
+				&nbsp;&nbsp;
+				<button id="check1"type="submit">SEND</button></p>
+				<p><label>Choose verification method:</label><br><input type="radio" name="abcd" value="otp" checked="checked">OTP
+        <input type="radio" name="abcd" value="email">EMAIL
+      </p>
+
+
+
+
+
+			</fieldset>
+		</form>
+	</div>
+</center>
+{% endblock %}

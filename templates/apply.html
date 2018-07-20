@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+	<div>
+		<form id="apply" method="post" action="/apply">
+			<fieldset>
+				<legend>
+					<b>
+						REGISTRATION FORM
+					</b>
+				</legend>
+				<br>
+				<div>
+					Name:
+					<input type="text"name="name"minlength="4"maxlength="10"required autofocus>
+				</div>
+				<br>
+
+				<div>
+					DOB:
+					<input type="date"name="dob" value="2017-06-01"required autofocus>
+				</div>
+				<br>
+
+				<div>
+					Address:
+					<input type="text"name="address" required autofocus>
+				</div>
+				<br>
+
+				<div>
+					Phone:
+					<input type="text" id="applyphone" name="phone"required autofocus>
+				</div>
+				<br>
+				<div>
+					Password:
+					<input type="password" id="applypassword" name="password" required autofocus>
+				</div>
+				<br>
+				<div>
+					Email:
+					<input id="applyemail"type="Email" name="email" required autofocus>
+				</div>
+				<br>
+				<button type="button"onclick="validateapply()">VERIFY</button>
+				&nbsp;&nbsp;
+				<button id="check0" type="submit">REGISTER</button>
+			</fieldset>
+		</form>
+	</div>
+</center>
+{% endblock %}

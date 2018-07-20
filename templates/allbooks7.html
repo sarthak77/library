@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<h2 style = "text-align: center;">{{ message }}</h2>
+<center>      
+	<table id="searchresult">
+		<tr>
+
+			<th>Name</th>
+			<th>Author</th>
+			<th>Category</th>
+
+		</tr>
+
+		{% for row in rows if 71<=row["id"] <=80%}
+		<tr>
+
+			<td>{{row["name"]}}</td>
+			<td>{{row["author"]}}</td>
+			<td>{{row["category"]}}</td>
+
+
+		</tr>
+		{% else %}
+		<h1>no user found!</h1>
+		{% endfor %}
+	</table> 
+	<br><br>
+	<table id="pagination">	
+		<tr>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks">1</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks1">2</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks2">3</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks3">4</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks4">5</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks5">6</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks6">7</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks7">8</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks8">9</a>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks9">10</a>
+			</td>
+			</td>
+			<td id="pagination2">
+				<a id="pagination1" href="allbooks10">11</a>
+			</td>
+		</tr>
+	</table>
+</center>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if request.method == "POST" %}
+{%if x!=0 %}
+<center>
+	<div style="width:90%;">
+		<h1 style="text-align:center;">Book Search Results</h1>
+		<center>
+			<table id="searchresult">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Author</th>
+					<th>Category</th>
+				</tr>
+				{% for book in payload.books %}
+				<tr>
+
+					<td>{{book[1]}}</td>
+					<td>{{book[0]}}</td>
+					<td>{{book[2]}}</td>
+					<td>{{book[3]}}</td>
+
+
+				</tr>
+				{% endfor %}
+			</table>
+		</center>
+	</div>
+</center>
+{%else%}
+<h1 style="text-align:center;">Sorry, no book found :-(</h1>
+{%endif%}
+{% endif %}
+{% endblock %}

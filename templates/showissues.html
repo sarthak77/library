@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %}
+{%if flag==1%}
+<h2 style="text-align:center;">
+MAIL SENT
+</h2>
+{%endif%}
+{%if a[2]!=0%}
+<center>
+<table id ="searchresult">
+		<tr>
+		<th colspan="3">
+			BOOK ISSUED
+		</th>
+		<th colspan="4">
+			ISSUED TO
+		</th>
+		</tr>
+		<tr>
+			<td>
+				<b>
+				NAME
+				</b>
+				</td>
+			<td>
+				<b>
+				ID
+				</b>
+				</td>
+			<td>
+				<b>
+				AUTHOR
+				</b>
+				</td>
+			<td>
+				<b>
+				ID
+				</b>
+				</td>
+			<td>
+				<b>
+				CARD NO
+				</b>
+				</td>
+			<td>
+				<b>
+				NAME
+				</b>
+				</td>
+			<td>
+				<b>
+				EMAIL
+				</b>
+				</td>
+			<tr>
+		{%for i in range(a[2])%}
+		<tr>
+			<td>
+				{{a[0][i][0]}}
+			</td>
+			<td>
+				{{a[0][i][1]}}
+			</td>
+			<td>
+				{{a[0][i][2]}}
+			</td>
+			<td>
+				{{a[1][i][0]}}
+			</td>
+			<td>
+				{{a[1][i][1]}}
+			</td>
+			<td>
+				{{a[1][i][2]}}
+			</td>
+			<td>
+				{{a[1][i][9]}}
+			</td>
+		</tr>
+		{%endfor%}
+	</table>
+	</center>
+	{%else%}
+	<h2 style="text-align:center;">NO BBOKS ISSUED YET</h2>
+	{%endif%}
+	{% endblock %}

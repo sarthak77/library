@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+	<fieldset>
+		<legend>
+			<b>
+			LOG IN INFO(STUDENT)
+			</b>
+			</legend>
+			<br>
+	<form action='{{url_for("loginstudent", next=request.values.get("next"))}}' method="post">
+		<input type="text" name="username" id="username" placeholder="Username" required/>
+		<br><br>
+		<input type="password" name="password" id="password" placeholder="Password"/>
+		<br><br>
+		<input id="loginbutton" type="submit" class="button" value="Log In"/>
+	</form>
+	<br>
+	<strong>New Student</strong>
+	       	<a id="nonwhite" href="/apply"> Click here to Register</a>
+		</fieldset>
+{% endblock %}

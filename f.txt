@@ -1,0 +1,21 @@
+FUNCTIONS:
+
+1)Admin login
+2)Student login
+3)Admin signup(email and otp verification)
+4)Student signup(request goes to admin)
+5)Searchbook(category,author,name)
+6)Admin priveledges:
+**Searchstudent(id,card,name)
+**Issue and return
+**Accept registration request 
+**Send reminder emails of late fees
+**PDF generation of late fees
+**View student info
+**See other admins
+**View currently issued books
+7)Student priveledges:
+**View his account
+**See currently issued books
+**Search for books
+8)Strict form validations for all forms
