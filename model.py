@@ -33,12 +33,14 @@ def getAll():
 
 def authenticate(request):
 	con = sql.connect("database.db")
+	# username = "Sarthak" set for random admin
 	username = request.form['username']
 	password = request.form['password']
 	sqlQuery = "select password from admins where username = '%s'"%username
 	cursor = con.cursor()
 	cursor.execute(sqlQuery)
 	row = cursor.fetchall()
+	# status = True set for random admin
 	status = False
 	if row:
 		for i in range(0,len(row)):
@@ -49,6 +51,7 @@ def authenticate(request):
 			msg = username + "has logged in successfully"
 			session['username'] = username
 	else:
+		# session["username"]="username" set for random admin
 		msg = username + "login failed"
 
 	return status
