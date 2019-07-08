@@ -1,3 +1,8 @@
+# Library
+- library portal built using flask web framework<br>
+- download the repository and run python main.py<br>
+- note:-check for prerequisites in main.py and model.py
+
 ## Screenshots
 <div align='center'>
 <p align="center">
@@ -13,7 +18,3 @@
 </p>
 </div>
 
-## Library
-library portal built using flask web framework<br>
-download the repository and run python main.py<br>
-note::check for prerequisites in main.py and model.py
